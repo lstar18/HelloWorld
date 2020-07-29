@@ -6,8 +6,30 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Howdy Y'all!!");
+            Console.WriteLine("Please enter your name");
 
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Please select from southern, robot, or Hawaiian greeting");
+            var dialect = Console.ReadLine();
+
+            if (dialect == "southern")
+            {
+                Console.WriteLine($"'Howdy {name}'");
+            }
+            else if (dialect == "robot")
+            {
+                Console.WriteLine($"'H.E.L.L.O {name}'");
+            }
+            else if (dialect == "Hawaiian")
+            {
+                Console.WriteLine($"'Aloha {name}'");
+            }
+            //Console.WriteLine("Please enter your favorite color");
+
+            //var favColor = Console.ReadLine();
+
+            //randomDino = 
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan" };
 
             int CountSyllables(string word)
@@ -58,8 +80,8 @@ namespace HelloWorld
                     Console.WriteLine(animals[i]);
                 }
             }
-               
+
         }
-       
+
     }
 }
