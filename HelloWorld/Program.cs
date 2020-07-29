@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 
 namespace HelloWorld
 {
@@ -25,12 +26,15 @@ namespace HelloWorld
             {
                 Console.WriteLine($"'Aloha {name}'");
             }
-            //Console.WriteLine("Please enter your favorite color");
+            Console.WriteLine("Please enter your favorite color");
 
-            //var favColor = Console.ReadLine();
-
-            //randomDino = 
+            var favColor = Console.ReadLine();
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan" };
+            var random = new Random();
+            var randomNum = random.Next(0, animals.Length);
+            var randomAnimal = animals[randomNum];
+
+            Console.WriteLine($"Would you like to have a {favColor} {randomAnimal}?");
 
             int CountSyllables(string word)
             {
